@@ -1,0 +1,149 @@
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+/*.markdown-preview.markdown-preview {
+  // modify your style here
+  // eg: background-color: blue;
+}*/
+
+
+/* ==============================================
+   Markdown Preview Enhanced 【6级标题全覆盖】自定义样式
+   适用：Windows楷体 + 书名/篇/章/节/子节/细目 完整层级
+   说明：仅生效于本地VS Code预览，上传GitHub不影响
+   ============================================== */
+
+/* --------------------------
+   【全局正文统一设置】
+   范围：所有正文、列表、普通文字
+   可改：字体/字号/行高/文字色/背景色
+-------------------------- */
+.markdown-preview.markdown-preview {
+  /* 全局楷体：Windows系统通用，可替换"SimSun"宋体、"Microsoft YaHei"微软雅黑 */
+  font-family:"Times New Roman",  "KaiTi", "STKaiti", serif;
+  /* 正文字号：默认16px，按需改14/15/17/18 */
+  font-size: 16px;
+  /* 行间距：避免文字拥挤，默认1.7 */
+  line-height: 1.7;
+  /* 正文颜色：#000000纯黑，可改#333333深灰护眼 */
+  color: #000000;
+  /* 预览背景：#ffffff纯白，可改#f9f9f9浅灰护眼 */
+  background-color: #ffffff;
+}
+
+/* --------------------------
+   【1级标题 # 对应：书名/笔记总标题】
+   示例：# 《神经科学：探索脑》学习笔记
+-------------------------- */
+.markdown-preview h1 {
+  font-family:"Times New Roman",  "KaiTi", "STKaiti", serif;
+  font-size: 28px;    /* 最大字号，突出总标题 */
+  color: #111111;     /* 最深色，视觉权重最高 */
+  font-weight: bold;  /* 加粗 */
+  line-height: 1.4;
+  margin-top: 10px;   /* 上边距，避免和正文贴太紧 */
+}
+
+/* --------------------------
+   【2级标题 ## 对应：第一篇/第二篇】
+   示例：## 第一篇 基础
+-------------------------- */
+.markdown-preview h2 {
+  font-family:"Times New Roman",  "KaiTi", "STKaiti", serif;
+  font-size: 24px;
+  color: #222222;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-top: 8px;
+}
+
+/* --------------------------
+   【3级标题 ### 对应：第一章/第二章】
+   示例：### 第一章 神经科学的过去、现在和未来
+-------------------------- */
+.markdown-preview h3 {
+  font-family:"Times New Roman",  "KaiTi", "STKaiti", serif;
+  font-size: 21px;
+  color: #333333;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-top: 6px;
+}
+
+/* --------------------------
+   【4级标题 #### 对应：1.1 / 2.1 小节】
+   示例：#### 1.1 神经元的基本结构
+-------------------------- */
+.markdown-preview h4 {
+  font-family:"Times New Roman",  "KaiTi", "STKaiti", serif;
+  font-size: 18px;
+  color: #444444;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-top: 5px;
+}
+
+/* --------------------------
+   【5级标题 ##### 对应：1.1.1 / 2.1.1 子小节】
+   示例：##### 1.1.1 胞体的功能
+-------------------------- */
+.markdown-preview h5 {
+  font-family: "Times New Roman", "KaiTi", "STKaiti", serif;
+  font-size: 16px;
+  color: #555555;
+  font-weight: normal; /* 不加粗，和上一级区分 */
+  line-height: 1.4;
+  margin-top: 4px;
+}
+
+/* --------------------------
+   【6级标题 ###### 对应：1.1.1.1 / 2.1.1.1 细目知识点】
+   示例：###### 1.1.1.1 细胞核的组成
+-------------------------- */
+.markdown-preview h6 {
+  font-family:"Times New Roman",  "KaiTi", "STKaiti", serif;
+  font-size: 15px;
+  color: #666666;
+  font-weight: normal;
+  line-height: 1.4;
+  margin-top: 3px;
+}
+
+/* --------------------------
+   【列表文字统一设置】
+   范围：- 无序列表 / 1. 有序列表（记知识点用）
+-------------------------- */
+.markdown-preview ul,
+.markdown-preview ol {
+  font-family: "KaiTi", "STKaiti", serif;
+  font-size: 16px;
+  color: #000000;
+  line-height: 1.7;
+}
+
+/* --------------------------
+   【加粗重点文字设置】
+   范围：**核心概念/关键术语**
+-------------------------- */
+.markdown-preview strong {
+  font-family: "KaiTi", "STKaiti", serif;
+  font-weight: bold;
+  color: #c8102e; /* 红色突出重点，可改#000000黑色 */
+}
+
+/* --------------------------
+   【6级标题层级缩进设置】
+   实现效果：一级标题最左，级别越深越往右缩进，层级一目了然
+   单位em：1em≈1个汉字宽度，数字越大缩进越多
+-------------------------- */
+.markdown-preview h1 { padding-left: 0em; }   /* 书名：无缩进 */
+.markdown-preview h2 { padding-left: 1em; }   /* 第一篇：缩进1个汉字 */
+.markdown-preview h3 { padding-left: 2em; }   /* 第一章：缩进2个汉字 */
+.markdown-preview h4 { padding-left: 3em; }   /* 1.1小节：缩进3个汉字 */
+.markdown-preview h5 { padding-left: 4em; }   /* 1.1.1子小节：缩进4个汉字 */
+.markdown-preview h6 { padding-left: 5em; }   /* 1.1.1.1细目：缩进5个汉字 */
+
+/* 正文段落首行缩进2个汉字，适配中文阅读 */
+.markdown-preview p {
+  text-indent: 2em;
+}
